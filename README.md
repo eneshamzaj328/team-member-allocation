@@ -1,3 +1,13 @@
+# Team Member Allocation - Web
+
+This project is build in React.js and it's beginner friendly!
+Tools that I used: React useContext Api, React Router Dom, React Icons, React Hash Link and
+'much more' cool features "for beginners".
+This web needs more to work on it but I'll leave simple as it is because,
+I tried to keep it simple as much as I could.
+
+Enjoy this Simple React App it's free!
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
