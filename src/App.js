@@ -1,24 +1,32 @@
-import logo from './logo.svg';
+import React from 'react';
+import { DataProvider } from './context/TmaContext';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
+import Header from './components/Layout/Header';
+import Employees from './components/Employees';
+import GroupedTeamMembers from './components/GroupedTeamMembers';
+import About from './Pages/About';
+import NotFound from './Pages/NotFound';
+import Footer from './components/Layout/Footer';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <DataProvider>
+      <Router>
+        <Header />
+
+        <main className="my-5 pb-3">
+          <Routes>
+            <Route path="/" element={<Employees />} />
+            <Route path="/team-members" element={<GroupedTeamMembers />} />
+            <Route path="/about" element={<About />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </main>
+
+        <Footer />
+      </Router>
+    </DataProvider>
   );
 }
 
